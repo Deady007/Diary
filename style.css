@@ -1,0 +1,298 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Segoe UI', sans-serif;
+    color: #2d3e50;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+input[type="text"], input[type="password"], input[type="date"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+/* Homepage (index.php) */
+header {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.add-entry-btn {
+    background-color: #3498db;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.add-entry-btn:hover {
+    background-color: #2980b9;
+}
+
+.entries-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.entries-table th, .entries-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.entries-table th {
+    background-color: #3498db;
+    color: white;
+}
+
+.entries-table td:hover {
+    background-color: #f1f1f1;
+}
+
+.action-btn {
+    background-color: #27ae60;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #2ecc71;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.export-btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.export-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Add Entry Page (add_entry.php) */
+.form-container {
+    max-width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+}
+
+textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #3498db;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* View Entry Page (view_entry.php) */
+.entry-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.entry-detail p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #3498db;
+    font-size: 16px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Edit Entry Page (edit_entry.php) */
+form {
+    max-width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"], form textarea {
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Login Page (login.php) */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 30px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Interactive Select All Feature */
+input[type="checkbox"] {
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+    transform: scale(1.1);
+}
